@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --main-color:#686D76;
+    --black:#ffffff;
+    --bg:#ffffff;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    color: #373A40;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+pre{
+    font-family: 'Roboto', sans-serif;
+    color: #373A40;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #1d1d1d;
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--bg);
+}
+
+section{
+    padding:2rem 7%;
+}
+
+.header{
+    background: #373A40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.logo a{
+    color: var(--bg); 
+    font-size: 20px;
+    text-decoration: none;   display: flex;
+    font: 600 20px lato, sans-serif;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:#B4B4B8;
+}
+
+.header .navbar a:hover{
+    color:#EEEEEE;
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color:#1d1d1d;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color:var(--main-color);
+}
+
+@media only screen and (max-width: 991px) {
+  .header{
+      padding: 1.5rem 3%;
+  }
+
+  .header .navbar a{
+      margin:0 0.5rem;
+  }
+
+  .header .icons div{
+      margin-left: 1rem;
+  }
+}
+
+.heading {
+    text-align: center;
+    color: #1d1d1d;
+    font: 600 32px Montserrat, sans-serif;
+    letter-spacing: 6.4px;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 3.5rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1rem;
+    color: #fcfdfd;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+    color: #fcfdfd;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../images/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color:var(--main-color);
+}
+
+.home .content pre{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.8;
+    padding:0.5rem 0;
+    color:#949393;
+}
+
+.product .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap:1.5rem;
+    position: relative;
+    padding-bottom: 4rem; /* Add padding to ensure button does not overlap with content */
+}
+
+.product .box-container .box{
+    padding:5rem;
+    text-align: center;
+    border:var(--border);    
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.product .box-container .box img{
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product .box-container .box h3{
+    color: #1d1d1d;
+    font-size: 2rem;
+    padding:1rem 0;
+}
+
+.product .box-container .box .price{
+    color: #1d1d1d;
+    font-size: 1.5rem;
+    padding:.5rem 0;
+}
+
+.product .box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.product .box-container .box:hover{
+    background:#373A40;
+}
+
+.product .box-container .box:hover > *{
+    color:var(--black);
+}
+
+.product .btn {
+    position: absolute;
+    bottom: -2rem; /* Adjust this value if necessary */
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: fit-content;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    padding: 1rem 3rem; /* Increase padding to enlarge the button */
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem; /* Increase font size */
+}
+
+.product .btn:hover {
+    color: white;
+    background: #686D76;
+}
+
+.about-us {
+    background: #fcfdfd;
+    padding: 10rem 7%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.about-us .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 4rem;
+}
+
+.about-us .image {
+    flex: 1;
+    border-radius: 3%;
+    overflow: hidden;
+}
+
+.about-us .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-us .content {
+    flex: 1;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.about-us .heading {
+    color: #1d1d1d;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-us .content h3 {
+    color: #1d1d1d;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.about-us .content p {
+    color: #1d1d1d;
+    font-size: 2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: justify;
+    text-transform: none;
+}
+
+.about-us .btn {
+    align-self: center; /* Menyelaraskan tombol di tengah secara horizontal */
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    color: #fcfdfd;
+    background: var(--main-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.about-us .btn:hover {
+    background: #575c66;
+}
+
+.footer {
+     background: #373A40;
+    text-align: center;
+    padding: 2rem 0;
+}
+.footer .credit{
+    color: #f0f0f0;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
