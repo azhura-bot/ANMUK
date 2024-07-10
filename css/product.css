@@ -72,6 +72,26 @@ body{
     border-bottom: .1rem solid var(--main-color);
     padding-bottom: .5rem;
 }
+.header .navbar .login-button:hover {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.header .navbar a button {
+    background-color: #949da8;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.header .navbar a button:hover {
+    background-color: #4b5156;
+}
 
 @media only screen and (max-width: 991px) {
 .header{
